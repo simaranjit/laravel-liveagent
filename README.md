@@ -1,4 +1,4 @@
-# Laravel Liveagent integration
+# Laravel LiveAgent integration for API V3
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/macsidigital/laravel-liveagent.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-liveagent)
 [![Build Status](https://img.shields.io/travis/macsidigital/laravel-liveagent/master.svg?style=flat-square)](https://travis-ci.org/MacsiDigital/laravel-liveagent)
