@@ -28,7 +28,7 @@ class TicketListItem extends Model
         'is_html_message' => 'N',
         'custom_fields' => [],
         'tags' => [],
-        'attachments' => ''
+        'attachments' => '',
     ];
 
     protected $createAttributes = [
@@ -48,7 +48,7 @@ class TicketListItem extends Model
         'is_html_message',
         'custom_fields',
         'tags',
-        'attachments'
+        'attachments',
     ];
 
     public function setUserID($user_id)
@@ -68,5 +68,4 @@ class TicketListItem extends Model
 
         return $model;
     }
-
 }

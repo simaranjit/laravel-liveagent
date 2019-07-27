@@ -11,5 +11,4 @@ interface LiveAgent
     public function __get($key);
 
     public function getNode($key);
-
 }

@@ -16,8 +16,8 @@ class Request
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'apikey' => config('liveagent.api_key')
-            ]
+                'apikey' => config('liveagent.api_key'),
+            ],
         ];
         $this->client = new Client($options);
 
@@ -27,7 +27,7 @@ class Request
     public function ping()
     {
         try {
-            return $this->client->request('GET', 'ping');    
+            return $this->client->request('GET', 'ping');
         } catch (Exception $e) {
             return $e->getResponse();
         }

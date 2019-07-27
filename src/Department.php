@@ -13,7 +13,7 @@ class Department extends Model
     protected $methods = ['get'];
 
     protected $queryAttributes = [
-        
+
     ];
 
     protected $attributes = [
@@ -22,7 +22,6 @@ class Department extends Model
         'name' => '',
         'online_status' => '',
         'agent_ids' => '',
-        'mailaccount_id' => ''
+        'mailaccount_id' => '',
     ];
-
 }

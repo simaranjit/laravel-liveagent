@@ -2,7 +2,6 @@
 
 namespace MacsiDigital\LiveAgent;
 
-use MacsiDigital\LiveAgent\Ticket;
 use MacsiDigital\LiveAgent\Support\Model;
 
 class Contact extends Model
@@ -14,7 +13,7 @@ class Contact extends Model
     protected $methods = ['get', 'post', 'put', 'patch', 'delete'];
 
     protected $queryAttributes = [
-        'system_name'
+        'system_name',
     ];
 
     protected $attributes = [
@@ -107,9 +106,8 @@ class Contact extends Model
         'custom_fields',
     ];
 
-    public function tickets() 
+    public function tickets()
     {
         return (new Ticket)->where('owner_email', $this->registration_email);
     }
-
 }

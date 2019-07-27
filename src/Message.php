@@ -13,7 +13,7 @@ class Message extends Model
     protected $methods = ['get'];
 
     protected $queryAttributes = [
-        'includeQuotedMessages'
+        'includeQuotedMessages',
     ];
 
     protected $attributes = [
@@ -23,7 +23,6 @@ class Message extends Model
         'datecreated' => '',
         'format' => '',
         'message' => '',
-        'visibility' => ''
+        'visibility' => '',
     ];
-    
 }

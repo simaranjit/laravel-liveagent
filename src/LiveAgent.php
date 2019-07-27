@@ -4,8 +4,8 @@ namespace MacsiDigital\LiveAgent;
 
 use Exception;
 use Illuminate\Support\Str;
-use MacsiDigital\LiveAgent\Contracts\LiveAgent as Contract;
 use MacsiDigital\LiveAgent\Interfaces\PrivateApplication;
+use MacsiDigital\LiveAgent\Contracts\LiveAgent as Contract;
 
 class LiveAgent implements Contract
 {
@@ -26,7 +26,7 @@ class LiveAgent implements Contract
         $this->client = (new PrivateApplication());
     }
 
-    public function getClient() 
+    public function getClient()
     {
         return $this->client;
     }
