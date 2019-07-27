@@ -45,10 +45,9 @@ Also the LiveAgent API is very inconsistant, for example it assigns a different 
 
 Best to check the documentation at 
 
-https://reviseradiology.ladesk.com/docs/api/v3/
-[LiveAgent](https://reviseradiology.ladesk.com/docs/api/v3/)
+[LiveAgent Docs](https://reviseradiology.ladesk.com/docs/api/v3/)
 
-There is a playgroudn there to test the API, sometimes its just a case of playing until you find what is required as the docuemnts dont tell you!!
+There is a playground there to test the API, sometimes its just a case of playing until you find what is required as the docuemnts dont tell you!!
 
 We also use a little bit of magic to work with LiveAgent's model names.
 
