@@ -6,7 +6,6 @@ use MacsiDigital\LiveAgent\Support\Model;
 
 class MessageGroup extends Model
 {
-
     protected $attributes = [
         'id' => '',
         'parent_id' => '',
@@ -19,16 +18,15 @@ class MessageGroup extends Model
         'sort_order' => '',
         'mail_msg_id' => '',
         'pop3_msg_id' => '',
-        'messages' => []
+        'messages' => [],
     ];
 
     protected $relationships = [
         'messages' => '\MacsiDigital\LiveAgent\Message',
     ];
 
-    public function messages() 
+    public function messages()
     {
         return (new Message)->collect($this->messages);
     }
-    
 }

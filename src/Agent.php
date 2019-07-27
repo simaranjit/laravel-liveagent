@@ -13,7 +13,7 @@ class Agent extends Model
     protected $methods = ['get'];
 
     protected $queryAttributes = [
-        'email'
+        'email',
     ];
 
     protected $attributes = [
@@ -24,27 +24,26 @@ class Agent extends Model
         'avatar_uri' => '',
         'online_status' => '',
         'status' => '',
-        'gender' => ''
+        'gender' => '',
     ];
 
-    public function logout() 
+    public function logout()
     {
-         $this->client->post($this->getEndpoint().'/'.$this->getID().'/_logout', []);
+        $this->client->post($this->getEndpoint().'/'.$this->getID().'/_logout', []);
     }
 
-    public function pause() 
+    public function pause()
     {
-        $this->client->post($this->getEndpoint().'/'.$this->getID().'/_pause', []);   
+        $this->client->post($this->getEndpoint().'/'.$this->getID().'/_pause', []);
     }
 
-    public function status() 
+    public function status()
     {
         return $this->client->get($this->getEndpoint().'/'.$this->getID().'/_status')->getContents();
     }
 
-    public function activity() 
+    public function activity()
     {
         return $this->client->get($this->getEndpoint().'/activity')->getContents();
     }
-
 }

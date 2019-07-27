@@ -134,7 +134,7 @@ abstract class Model
         }
     }
 
-     /**
+    /**
      * Set a given attribute on the model.
      *
      * @param  string  $key
@@ -282,10 +282,10 @@ abstract class Model
         }
     }
 
-    public function where($key, $operator, $value="")
+    public function where($key, $operator, $value = '')
     {
-        if(in_array($key, $this->queryAttributes)){
-            if($value == ""){
+        if (in_array($key, $this->queryAttributes)) {
+            if ($value == '') {
                 $value = $operator;
                 $operator = '=';
             }
@@ -298,34 +298,34 @@ abstract class Model
     public function parameter($key, $valu)
     {
         $field = '_'.$key;
-        if(array_key_exists($field, $this->parameters)){
-            $this->parameters[$field] = $value;    
+        if (array_key_exists($field, $this->parameters)) {
+            $this->parameters[$field] = $value;
         }
 
         return $this;
     }
 
-    public function getQueryString() 
+    public function getQueryString()
     {
         $query_string = '';
-        if($this->queries != []){
+        if ($this->queries != []) {
             $query_string .= '?_filters=';
             $i = 1;
-            foreach($this->queries as $query){
-                if($i>1){
+            foreach ($this->queries as $query) {
+                if ($i > 1) {
                     $query_string .= '&';
                 } else {
                     $query_string .= '[';
                 }
-                $query_string  .= json_encode([$query['key'], $query['operator'], $query['value']]);
+                $query_string .= json_encode([$query['key'], $query['operator'], $query['value']]);
                 $i++;
             }
             $query_string .= ']';
             $query_string .= '&'.http_build_query($this->parameters);
         } else {
-            $query_string .=  '?'.http_build_query($this->parameters);
+            $query_string .= '?'.http_build_query($this->parameters);
         }
-        
+
         return $query_string;
     }
 
@@ -370,7 +370,7 @@ abstract class Model
         }
     }
 
-    public function delete($id = "")
+    public function delete($id = '')
     {
         if ($id == '') {
             $id = $this->getID();

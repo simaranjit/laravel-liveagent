@@ -13,7 +13,7 @@ class Ticket extends Model
     protected $methods = ['get', 'post', 'put', 'delete'];
 
     protected $queryAttributes = [
-        'owner_email'
+        'owner_email',
     ];
 
     protected $attributes = [
@@ -56,7 +56,7 @@ class Ticket extends Model
         'is_html_message',
         'custom_fields',
         'tags',
-        'attachments'
+        'attachments',
     ];
 
     protected $updateAttributes = [
@@ -65,15 +65,15 @@ class Ticket extends Model
         'agentid',
         'status',
         'tags',
-        'date_created'
+        'date_created',
     ];
 
-    public function history() 
+    public function history()
     {
         return $this->client->get($this->getEndpoint().'/'.$this->getID().'/history')->getContents();
     }
 
-    public function messageGroup() 
+    public function messageGroup()
     {
         $response = $this->client->get($this->getEndpoint().'/'.$this->getID().'/messages');
         if ($response->getStatusCode() == '200') {
@@ -82,5 +82,4 @@ class Ticket extends Model
             throw new Exception('Status Code '.$this->response->getStatusCode().': '.$this->response->getBody()['message']);
         }
     }
-
 }
