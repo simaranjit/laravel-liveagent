@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-liveagent` will be documented in this file
 
+## 1.0.2 - 2019-06-28
+
+- Bug fix:-
+	Error when using find
+
 ## 1.0.1 - 2019-06-27
 
 - Remove debug

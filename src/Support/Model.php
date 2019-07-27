@@ -362,7 +362,7 @@ abstract class Model
         if (in_array('get', $this->methods)) {
             $this->response = $this->client->get($this->getEndpoint().'/'.$id);
             if ($this->response->getStatusCode() == '200') {
-                return $this->collect($this->response->getBody())->first();
+                return $this->collect([$this->response->getBody()])->first();
             } else {
                 throw new Exception('Status Code '.$this->response->getStatusCode().': '.$this->response->getBody()['message']);
             }
