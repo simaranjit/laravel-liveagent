@@ -226,7 +226,6 @@ abstract class Model
 
     public function make($attributes)
     {
-        dd($attributes);
         $model = new static;
         $model->fill($attributes);
 

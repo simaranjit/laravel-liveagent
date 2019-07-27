@@ -2,8 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/macsidigital/laravel-liveagent.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-liveagent)
 [![Build Status](https://img.shields.io/travis/macsidigital/laravel-liveagent/master.svg?style=flat-square)](https://travis-ci.org/MacsiDigital/laravel-liveagent)
-[![StyleCI](https://github.styleci.io/repos/193588958/shield?branch=master)](https://github.styleci.io/repos/193588958)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MacsiDigital/laravel-liveagent/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MacsiDigital/laravel-liveagent/?branch=master)
+[![StyleCI](https://github.styleci.io/repos/198825420/shield?branch=master)](https://github.styleci.io/repos/198825420)
 [![Total Downloads](https://img.shields.io/packagist/dt/macsidigital/laravel-liveagent.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-liveagent)
 
 A little Laravel package to communicate with LiveAgent.
