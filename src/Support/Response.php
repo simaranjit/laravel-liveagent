@@ -8,9 +8,9 @@ class Response
 {
     protected $response;
 
-    public function __construct(GuzzleResponse $response)
+    public function __construct()
     {
-        $this->response = $response;
+        $this->response = new GuzzleResponse;
     }
 
     public function getResponse()
