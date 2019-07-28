@@ -387,8 +387,10 @@ abstract class Model
     protected function collect($response)
     {
         $items = [];
-        foreach ($response as $item) {
-            $items[] = static::make($item);
+        if(is_array($response)){
+            foreach ($response as $item) {
+                $items[] = static::make($item);
+            }    
         }
 
         return new Collection($items);
