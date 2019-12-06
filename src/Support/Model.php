@@ -294,7 +294,7 @@ abstract class Model
         return $this;
     }
 
-    public function parameter($key, $valu)
+    public function parameter($key, $value)
     {
         $field = '_'.$key;
         if (array_key_exists($field, $this->parameters)) {
